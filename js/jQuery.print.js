@@ -1,4 +1,4 @@
-/* @license 
+/* @license
  * jQuery.print, version 1.3.2
  *  (c) Sathvik Ponangi, Doers' Guild
  * Licence: CC-By (http://creativecommons.org/licenses/by/3.0/)
@@ -59,7 +59,7 @@
     $.print = $.fn.print = function () {
         // Print a given set of elements
         var options, $this, self = this;
-        // console.log("Printing", this, arguments);
+        console.log("Printing", this, arguments);
         if (self instanceof $) {
             // Get the node if it is a jQuery object
             self = self.get(0);
@@ -106,7 +106,8 @@
         var $styles = $("");
         if (options.globalStyles) {
             // Apply the stlyes from the current sheet to the printed page
-            $styles = $("style, link, meta, title");
+            // $styles = $("style, link, meta, title");
+            $styles = $("style, link, meta");
         } else if (options.mediaPrint) {
             // Apply the media-print stylesheet
             $styles = $("link[media=print]");

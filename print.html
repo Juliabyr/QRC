@@ -5,13 +5,12 @@
     <script type="text/javascript" src="js/jquery.qrcode.min.js"></script>
     <link  rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-
 </head>
 <body>
 <div class="row">
 	<div class="col-md-12">
 		<div class="box box-info">
-             <div id="printContent" style="">
+             <div id="printContent">
                  <div class="user">
                  </div>
                  <div class="body"><!-- //蓝色的底色 -->
@@ -21,7 +20,7 @@
                         </div>
                         <div class="qrcBody" id="qrcBodyImg" style="display:none">
                              <img class= "qrcImg" src="">
-                             <img class="align-center-middle upLogo" src="img/kaoshen.jpg" >
+                             <img class="align-center-middle upLogo" src="" >
                         </div>
                     </div>
                 </div>
@@ -53,7 +52,9 @@
    });
       //canvas转img
       var qrcSrc = $("canvas")[0].toDataURL();
+      var upLogSrc = "img/kaoshen.jpg";
       $("#qrcBodyImg .qrcImg").attr("src", qrcSrc);
+       $("#qrcBodyImg .upLogo").attr("src", upLogSrc);
             $("#qrcBody").hide();//隐藏canvas部分
             $("#qrcBodyImg").show();//显示img部分
      });
