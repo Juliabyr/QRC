@@ -1,0 +1,72 @@
+ table tr .class myth{font-size:12px} td{font-size:13px;word-break:break-all; border-bottom:1px;}
+/*
+        #tb {border: 1px solid #ccc;}
+        .buttonArrow { margin:50px 0}
+        .buttonArrow *{ margin:10px 0}
+        #rightTable {border: 1px solid #ccc;}*/
+        #printContent{
+            width:756px;
+            height:600px;
+            border:1px solid #ccc;
+            margin:100px auto;
+        }
+        .user{
+            font-family:"Trebuchet MS",Arial,Helvetica,sans-serif;
+            letter-spacing:1px;
+            font-size: 18px;
+            padding: 15px 0px;
+            width:50%;
+            margin: auto auto;
+        }
+        .body{
+         -webkit-print-color-adjust: exact;
+         width:50%;
+         height:450px;
+         margin: auto auto;
+         border:1px solid #ccc;
+         background:#007DCF !important;
+     }
+     .title{
+        text-align: center;
+        padding: 20px;
+        font-family:"Trebuchet MS",Arial,Helvetica,sans-serif, bold;
+        letter-spacing:1px;
+        font-size: 22px;
+        color:#fff;
+    }
+    .qrc{
+        margin: auto auto;
+        width:80%;
+        background-color: #fff !important;
+        border:1px solid #fff;
+    }
+    .qrctop p{
+        text-align: center;
+        font-size: 19px;
+        color: #333333;
+        margin:10px;
+    }
+    .qrctop img{
+        width: 60px;
+        height: 60px;
+    }
+    .qrcBody{
+        margin: 20px auto;
+        width:250px;
+    }
+    #qrcBodyImg{
+     display: block;
+     width: 250px;
+     position: relative;
+ }
+
+ .align-center-middle{
+     position:absolute;
+     height: 30px;
+     width: 30px;
+     margin: auto;
+     top:0px;
+     bottom: 0px;
+     right: 0px;
+     left: 0px;
+ }

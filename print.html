@@ -1,0 +1,70 @@
+
+<head>
+    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="js/jQuery.print.js"></script>
+    <script type="text/javascript" src="js/jquery.qrcode.min.js"></script>
+    <link  rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body>
+<div class="row">
+	<div class="col-md-12">
+		<div class="box box-info">
+             <div id="printContent" style="">
+                 <div class="user">
+                 </div>
+                 <div class="body"><!-- //蓝色的底色 -->
+                    <div class="title">Scan To Pay</div>
+                    <div class="qrc">
+                        <div class="qrcBody" id="qrcBody">
+                        </div>
+                        <div class="qrcBody" id="qrcBodyImg" style="display:none">
+                             <img class= "qrcImg" src="">
+                             <img class="align-center-middle upLogo" src="img/kaoshen.jpg" >
+                        </div>
+                    </div>
+                </div>
+            </div>
+     <div class="box-footer">
+      <button class="btn btn-default pull-left" type="button"
+      onclick="javascript:history.back(1);">Return</button>
+      <button id="btnPrint" type="button"
+      class="btn btn-primary pull-right" style="margin-left :30px">Print QRC</button>
+  </div>
+</div>
+
+</div>
+
+</div>
+<!-- /.box -->
+</div>
+
+<!-- /.row -->
+
+<script type="text/javascript">
+    $(document).ready(function() {
+      $("#qrcodeList").addClass("active");
+      //使用jQuery.qrcode.min.js生成二维码。
+      jQuery('#qrcBody').qrcode({
+       width: 250,
+       height: 250,
+       text: "good good study, day day up! "//二维码的内容
+   });
+      //canvas转img
+      var qrcSrc = $("canvas")[0].toDataURL();
+      $("#qrcBodyImg .qrcImg").attr("src", qrcSrc);
+            $("#qrcBody").hide();//隐藏canvas部分
+            $("#qrcBodyImg").show();//显示img部分
+     });
+    $("#btnPrint").click(function(){
+       $("#printContent").print({
+
+       });
+
+   });
+
+</script>
+<!--/.col (right) -->
+</body>
+
